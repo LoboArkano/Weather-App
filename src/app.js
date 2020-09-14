@@ -2,7 +2,7 @@ import getWeather from './controller';
 
 const app = (() => {
   const start = () => {
-    getWeather('guadalajara');
+    getWeather();
   };
 
   return { start };

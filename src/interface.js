@@ -25,6 +25,7 @@ const userInterface = (() => {
     const imageDesc = document.createElement('p');
 
     weatherImg.setAttribute('id', 'weather-img');
+    weatherImg.setAttribute('src', '#');
     imageDesc.setAttribute('id', 'img-desc');
 
     imageCont.append(weatherImg, imageDesc);
@@ -129,7 +130,39 @@ const userInterface = (() => {
     content.append(searchForm(), weatherCont());
   };
 
-  return { loadUI };
+  const render = (weather) => {
+    const cityInfo = document.getElementById('cityInfo');
+    const weatherImg = document.getElementById('weather-img');
+    const imdDesc = document.getElementById('img-desc');
+    const temp = document.getElementById('temp');
+    const tempMax = document.getElementById('temp-max');
+    const tempMin = document.getElementById('temp-min');
+    const speed = document.getElementById('speed');
+    const deg = document.getElementById('deg');
+    const pressure = document.getElementById('pressure');
+    const humidity = document.getElementById('humidity');
+    const sunrise = document.getElementById('sunrise');
+    const sunset = document.getElementById('sunset');
+    const lon = document.getElementById('lon');
+    const lat = document.getElementById('lat');
+
+    cityInfo.innerHTML = `${weather.get('city')}, ${weather.get('country')}`;
+    weatherImg.src = `http://openweathermap.org/img/w/${weather.get('image').icon}.png`;
+    imdDesc.innerHTML = weather.get('image').main;
+    temp.innerHTML = `${weather.get('temp').toFixed(1)}°C`;
+    tempMax.innerHTML = `max: ${weather.get('temp_max').toFixed(1)}°C`;
+    tempMin.innerHTML = `min: ${weather.get('temp_min').toFixed(1)}°C`;
+    speed.innerHTML = `${weather.get('speed')} m/s`;
+    deg.innerHTML = `${weather.get('deg')}°`;
+    pressure.innerHTML = `${weather.get('pressure')}hPa`;
+    humidity.innerHTML = `${weather.get('humidity')}%`;
+    sunrise.innerHTML = `sunrise: ${weather.get('sunrise')}`;
+    sunset.innerHTML = `sunset: ${weather.get('sunset')}`;
+    lon.innerHTML = `longitude: ${weather.get('lon')}`;
+    lat.innerHTML = `latitude: ${weather.get('lat')}`;
+  };
+
+  return { loadUI, render };
 })();
 
 export default userInterface;
