@@ -28,8 +28,7 @@ const apiWeather = (() => {
       weather.set('sunrise', localTime(apiData.sys.sunrise));
       weather.set('sunset', localTime(apiData.sys.sunset));
     } catch (error) {
-      alert(error);
-      console.log(error);
+      alert('City not found. Try again.');
     }
 
     return weather;
