@@ -5,7 +5,23 @@
 $seashell: #fff5ee;
 $light-gray: #d1d1d1;
 $shadow: rgba(0, 0, 0, 0.2);
-$form-height: 70px;
+$form-height: 50px;
+$dark1: #121212;
+$dark2: #181818;
+$dark3: #202020;
+$dark4: #323232;
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.text-center {
+  text-align: center;
+}
 
 .d-flex {
   display: flex;
@@ -15,9 +31,26 @@ $form-height: 70px;
   justify-content: flex-start;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
+body {
+  color: $seashell;
+}
+
 .form {
   height: $form-height;
   padding: 10px 25px;
+  background-color: $dark3;
+
+  #input-city {
+    color: $seashell;
+    background-color: $dark1;
+    border: 1px solid $dark4;
+    padding-left: 9px;
+    width: 250px;
+  }
 
   #input-city,
   #search {
@@ -25,7 +58,7 @@ $form-height: 70px;
   }
 
   #search {
-    background-color: $light-gray;
+    background-color: $dark4;
     font-size: 11px;
     padding: 5px;
     line-height: 20px;
@@ -36,8 +69,77 @@ $form-height: 70px;
   }
 }
 
+#content {
+  background-color: $dark2;
+  height: 100vh;
+}
+
+.main-cont {
+  margin: 35px auto 0;
+  border: 1px solid $seashell;
+  width: 640px;
+  border-radius: 5px;
+  padding: 18px 20px 25px 20px;
+
+  .weather-info {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: auto;
+
+    #city-info {
+      grid-column: 1/3;
+      padding-bottom: 18px;
+      font-size: 20px;
+    }
+
+    .image-cont {
+      flex-direction: column;
+      align-items: center;
+
+      #weather-img {
+        height: 90px;
+        width: 90px;
+      }
+
+      #img-desc {
+        font-size: 19px;
+      }
+    }
+
+    .temp-cont {
+      position: relative;
+      padding-bottom: 26px;
+
+      .temp {
+        font-size: 45px;
+        padding-top: 6px;
+        padding-bottom: 9px;
+      }
+
+      .temp-max,
+      .temp-min {
+        font-size: 25px;
+      }
+
+      .temp-text {
+        font-size: 17px;
+        text-transform: uppercase;
+        padding-top: 11px;
+      }
+    }
+
+    .w-info {
+      padding-top: 13px;
+      font-size: 17px;
+    }
+  }
+}
+
 .toogle-cont {
   display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
 
   input[type="checkbox"] {
     position: relative;
