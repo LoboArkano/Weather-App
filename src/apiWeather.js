@@ -10,7 +10,7 @@ const apiWeather = (() => {
     const weather = new Map();
 
     try {
-      const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=efb1c5442d9f74c1c186780238e45f35`, { mode: 'cors' });
+      const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=efb1c5442d9f74c1c186780238e45f35`, { mode: 'cors' });
       const apiData = await response.json();
 
       weather.set('city', apiData.name);
