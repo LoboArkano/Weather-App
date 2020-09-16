@@ -1,7 +1,8 @@
 import apiWeather from './apiWeather';
+import userInterface from './interface';
 
-const getWeather = () => {
-  apiWeather.getData('guadalajara');
+const getWeather = (city) => {
+  userInterface.loadUI(apiWeather.getData(city));
 };
 
 export default getWeather;
