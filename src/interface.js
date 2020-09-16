@@ -36,17 +36,32 @@ const userInterface = (() => {
     return imageCont;
   };
 
+  const toggleTemp = () => {
+    const toggleCont = document.createElement('div');
+    const toggleBtn = document.createElement('input');
+
+    toggleCont.classList.add('toogle-cont');
+    toggleBtn.setAttribute('type', 'checkbox');
+    toggleBtn.setAttribute('name', 'c');
+    toggleBtn.setAttribute('value', 'c');
+
+    toggleCont.appendChild(toggleBtn);
+
+    return toggleCont;
+  };
+
   const tempCont = () => {
     const tempCont = document.createElement('div');
     const temp = document.createElement('p');
     const tempMax = document.createElement('p');
     const tempMin = document.createElement('p');
+    const toggleBtn = toggleTemp();
 
     temp.setAttribute('id', 'temp');
     tempMax.setAttribute('id', 'temp-max');
     tempMin.setAttribute('id', 'temp-min');
 
-    tempCont.append(temp, tempMax, tempMin);
+    tempCont.append(temp, toggleBtn, tempMax, tempMin);
 
     return tempCont;
   };
