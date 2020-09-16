@@ -29,12 +29,34 @@ Weather App to receive the weather data from any city in the world.
 
 To get a local copy up and running follow these simple example steps.
 ```
-    git@github.com:LoboArkano/Weather-App.git
+    git clone git@github.com:LoboArkano/Weather-App.git
 ```
 
 ### Prerequisites
 
-- Web browser like Firefox or Chrome
+- npm
+
+- Nodejs
+
+### Setup
+
+Install dependencies with:
+
+```
+    npm install
+```
+
+Save a change with:
+
+```
+   npm run build
+```
+
+or
+
+```
+   npm run watch
+```
 
 ### Usage
 
