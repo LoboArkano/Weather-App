@@ -4,6 +4,9 @@ const userInterface = (() => {
     const input = document.createElement('input');
     const searchBtn = document.createElement('div');
 
+    input.setAttribute('id', 'input-city');
+    input.setAttribute('type', 'text');
+    searchBtn.setAttribute('id', 'search');
     searchBtn.innerHTML = 'SEACRH';
 
     form.append(input, searchBtn);
