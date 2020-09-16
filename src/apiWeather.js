@@ -13,10 +13,11 @@ const apiWeather = (() => {
       const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=efb1c5442d9f74c1c186780238e45f35`, { mode: 'cors' });
       const apiData = await response.json();
 
+      weather.set('city', apiData.name);
       weather.set('lon', apiData.coord.lon);
       weather.set('lat', apiData.coord.lat);
       weather.set('image', apiData.weather[0]);
-      weather.set('temo', apiData.main.temp - 273.15);
+      weather.set('temp', apiData.main.temp - 273.15);
       weather.set('temp_min', apiData.main.temp_min - 273.15);
       weather.set('temp_max', apiData.main.temp_max - 273.15);
       weather.set('pressure', apiData.main.pressure);
