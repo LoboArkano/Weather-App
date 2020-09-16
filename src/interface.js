@@ -4,6 +4,7 @@ const userInterface = (() => {
     const input = document.createElement('input');
     const searchBtn = document.createElement('div');
 
+    form.classList.add('form', 'd-flex', 'justify-start');
     input.setAttribute('id', 'input-city');
     input.setAttribute('type', 'text');
     searchBtn.setAttribute('id', 'search');
@@ -43,7 +44,7 @@ const userInterface = (() => {
     toggleCont.classList.add('toogle-cont');
     toggleBtn.setAttribute('type', 'checkbox');
     toggleBtn.setAttribute('name', 'c');
-    toggleBtn.setAttribute('value', 'c');
+    toggleBtn.setAttribute('id', 'toggle-temp');
 
     toggleCont.appendChild(toggleBtn);
 

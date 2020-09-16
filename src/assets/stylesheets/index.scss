@@ -5,6 +5,36 @@
 $seashell: #fff5ee;
 $light-gray: #d1d1d1;
 $shadow: rgba(0, 0, 0, 0.2);
+$form-height: 70px;
+
+.d-flex {
+  display: flex;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.form {
+  height: $form-height;
+  padding: 10px 25px;
+
+  #input-city,
+  #search {
+    height: 30px;
+  }
+
+  #search {
+    background-color: $light-gray;
+    font-size: 11px;
+    padding: 5px;
+    line-height: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
 
 .toogle-cont {
   display: flex;

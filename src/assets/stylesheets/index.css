@@ -3,6 +3,39 @@
           box-sizing: border-box;
 }
 
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.justify-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.form {
+  height: 70px;
+  padding: 10px 25px;
+}
+
+.form #input-city,
+.form #search {
+  height: 30px;
+}
+
+.form #search {
+  background-color: #d1d1d1;
+  font-size: 11px;
+  padding: 5px;
+  line-height: 20px;
+}
+
+.form #search:hover {
+  cursor: pointer;
+}
+
 .toogle-cont {
   display: -webkit-box;
   display: -ms-flexbox;
