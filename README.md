@@ -1,11 +1,15 @@
 # Weather-App
-Weather App to receive the weather data from any city in the world.
+Weather App to receive weather data from any city in the world.
 
 ## Screenshots
 
 ![image](https://user-images.githubusercontent.com/33432289/93241617-390d4400-f74b-11ea-93f0-fb7696d52a9e.png)
 
 ![image](https://user-images.githubusercontent.com/33432289/93241693-57733f80-f74b-11ea-990e-07ddcd18b0a4.png)
+
+## Live Demo
+
+[Live version](https://weather-app-roberto.netlify.app/)
 
 ## Built With
 
@@ -21,9 +25,13 @@ Weather App to receive the weather data from any city in the world.
 
 - openWeather
 
-## Live Demo
+## Future Features
 
-[Live version](https://weather-app-roberto.netlify.app/)
+- Improve the quality of the weather images.
+
+- Improve the precision of sunrise and sunset time.
+
+- Show city suggestions on the search input.
 
 ## Getting Started
 
@@ -60,7 +68,8 @@ or
 
 ### Usage
 
-Click on the search input, enter a city and click the search button;
+Click on the search input, enter a city, and click the search button.
+You can switch the temperature unit between Celsius and Fahrenheit with the toggle button.
 
 ## Author
 
